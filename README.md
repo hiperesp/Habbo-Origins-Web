@@ -18,4 +18,7 @@ Open the `dev.html` file in your browser to play in the development server.
 
 Go to `%appdata%/Habbo Launcher/` and copy the `downloads` folder to replace the `downloads` folder in this project root.
 
-# Habbo-Origins-Web
+# Thanks
+
+Special thanks to http://classichabbo.com, for the web files.
+
