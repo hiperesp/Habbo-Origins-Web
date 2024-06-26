@@ -1,0 +1,14 @@
+#client-topbar {	
+	width: 1440px;
+}
+
+#client-topbar .logo {	
+	width: 590px; 
+}
+#client-topbar .habbocount {	
+	width: 260px; 
+}
+
+#client-topbar .logout {	
+	width: 590px; 
+}

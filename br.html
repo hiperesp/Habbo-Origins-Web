@@ -15,7 +15,7 @@
         </div>
         <div>
             <object classid="clsid:166B1BCA-3F9C-11CF-8075-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=10,8,5,1,0" id="habbo" width="720" height="540">
-                <param name="src" value="downloads/shockwave/20/habbo.dcr">
+                <param name="src" value="downloads/shockwave/22/habbo.dcr">
                 <param name="swStretchStyle" value="none">
                 <param name="swText" value="">
                 <param name="bgColor" value="#000000">
@@ -26,7 +26,7 @@
                 <param name="sw6" value="external.variables.txt=http://origins-gamedata.habbo.com.br/external_variables/1">
                 <param name="sw7" value="external.texts.txt=http://origins-gamedata.habbo.com.br/external_texts/1">
                 <param name="sw8" value="client.allow.cross.domain=1;client.notify.cross.domain=0">
-                <embed src="downloads/shockwave/20/habbo.dcr" bgcolor="#000000" width="720" height="540" swvolume="true"
+                <embed src="downloads/shockwave/22/habbo.dcr" bgcolor="#000000" width="720" height="540" swvolume="true"
                     swrestart="false" swpauseplay="false" swfastforward="false" swtitle="Habbo Hotel" swcontextmenu="true"
                     swstretchstyle="none" swtext="" type="application/x-director" pluginspage="http://www.macromedia.com/shockwave/download/"
                     sw2="connection.info.host=game-obr.habbo.com;connection.info.port=40001"
@@ -38,29 +38,7 @@
                     sw8="client.allow.cross.domain=1;client.notify.cross.domain=0">
             </object>
         </div>
-        <script>
-            (function() {
-                function fetchOnlineUsers(callback) {
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4) { // request finished and response is ready
-                            if(this.status == 200) {
-                                var data = JSON.parse(this.responseText);
-                                if(data.onlineUsers) {
-                                    callback(data.onlineUsers+" members online");
-                                    return;
-                                }
-                            }
-                            callback("Failed to fetch online users");
-                        }
-                    };
-                    xhttp.open("GET", "https://origins.habbo.com.br/api/public/origins/users", true);
-                    xhttp.send();
-                }
-                fetchOnlineUsers(function(onlineMessage) {
-                    document.getElementById("habboCountUpdateTarget").innerHTML = onlineMessage;
-                });
-            })();
-        </script>
+        <script src="scripts/online.js"></script>
+        <script>updateOnlineUsers("br");</script>
     </body>
 </html>
