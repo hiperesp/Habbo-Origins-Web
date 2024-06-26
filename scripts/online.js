@@ -1,5 +1,3 @@
-
-
 function updateOnlineUsers(locale) {
     var urls = {
         br: "https://origins.habbo.com.br/api/public/origins/users",
